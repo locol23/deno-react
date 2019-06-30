@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.bundle.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "baseUrl": ".",
+    "paths": {
+      "deno": ["./deno.d.ts"],
+      "https://*": ["../../.deno/deps/https/*"],
+      "http://*": ["../../.deno/deps/http/*"]
+    }
+  }
+}
