@@ -1968,7 +1968,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react", ["require", "exports"], f
             }
         }
         if (invokeCallback) {
-            callback(traverseContext, children,
+            callback(traverseContext, children, 
             // If it's the only child, treat the name as if it was wrapped in an array
             // so that it's consistent if the number of children grows.
             nameSoFar === '' ? SEPARATOR + getComponentKey(children, 0) : nameSoFar);
@@ -2088,7 +2088,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react", ["require", "exports"], f
         }
         else if (mappedChild != null) {
             if (isValidElement(mappedChild)) {
-                mappedChild = cloneAndReplaceKey(mappedChild,
+                mappedChild = cloneAndReplaceKey(mappedChild, 
                 // Keep both the (mapped) and old keys if they differ, just as
                 // traverseAllChildren used to do for objects as children
                 keyPrefix + (mappedChild.key && (!child || child.key !== mappedChild.key) ? escapeUserProvidedKey(mappedChild.key) + '/' : '') + childKey);
@@ -7241,7 +7241,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
             return null;
         }
         var dispatch = isInteractiveTopLevelEventType(topLevelType) ? dispatchInteractiveEvent : dispatchEvent;
-        addEventBubbleListener(element, getRawEventName(topLevelType),
+        addEventBubbleListener(element, getRawEventName(topLevelType), 
         // Check if interactive and wrap in interactiveUpdates
         dispatch.bind(null, topLevelType));
     }
@@ -7259,7 +7259,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
             return null;
         }
         var dispatch = isInteractiveTopLevelEventType(topLevelType) ? dispatchInteractiveEvent : dispatchEvent;
-        addEventCaptureListener(element, getRawEventName(topLevelType),
+        addEventCaptureListener(element, getRawEventName(topLevelType), 
         // Check if interactive and wrap in interactiveUpdates
         dispatch.bind(null, topLevelType));
     }
@@ -8552,7 +8552,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
                 return;
             }
             warnedStyleNames[name] = true;
-            warning$1(false, 'Unsupported style property %s. Did you mean %s?', name,
+            warning$1(false, 'Unsupported style property %s. Did you mean %s?', name, 
             // As Andi Smith suggests
             // (http://www.andismith.com/blog/2012/02/modernizr-prefixed/), an `-ms` prefix
             // is converted to lowercase `ms`.
@@ -11725,7 +11725,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
         }
         {
             var name = getComponentName(type) || 'Unknown';
-            checkPropTypes_1(childContextTypes, childContext, 'child context', name,
+            checkPropTypes_1(childContextTypes, childContext, 'child context', name, 
             // In practice, there is one case in which we won't get a stack. It's when
             // somebody calls unstable_renderSubtreeIntoContainer() and we process
             // context from the parent component instance. The stack will be missing
@@ -14692,7 +14692,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
             eagerReducer: reducer,
             eagerState: initialState
         };
-        var dispatch = queue.dispatch = dispatchAction.bind(null,
+        var dispatch = queue.dispatch = dispatchAction.bind(null, 
         // Flow doesn't know this is non-null, but we do.
         currentlyRenderingFiber$1, queue);
         return [hook.memoizedState, dispatch];
@@ -14826,7 +14826,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
             eagerReducer: basicStateReducer,
             eagerState: initialState
         };
-        var dispatch = queue.dispatch = dispatchAction.bind(null,
+        var dispatch = queue.dispatch = dispatchAction.bind(null, 
         // Flow doesn't know this is non-null, but we do.
         currentlyRenderingFiber$1, queue);
         return [hook.memoizedState, dispatch];
@@ -21728,7 +21728,7 @@ define("https://unpkg.com/es-react@16.8.30/src/react-dom", ["require", "exports"
     }
     // This file intentionally does *not* have the Flow annotation.
     // Don't add it. See `./inline-typed.js` for an explanation.
-    function createPortal$1(children, containerInfo,
+    function createPortal$1(children, containerInfo, 
     // TODO: figure out the API for cross-renderer implementation.
     implementation) {
         var key = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
