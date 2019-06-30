@@ -1,6 +1,6 @@
 # deno-react
 
-build React with deno
+Build React with deno
 
 # Getting Started
 
